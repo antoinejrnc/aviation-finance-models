@@ -1,58 +1,49 @@
 # Aviation Finance Models
 
-This repository contains two original, professional-grade financial models developed to reflect industry-standard practices in aviation finance, asset valuation, and credit risk analysis.
+This repository contains two financial models developed independently to explore asset valuation and credit risk within the commercial aviation sector. The work was undertaken as a self-directed project to deepen my understanding of applied valuation, capital recovery dynamics, and airline financial resilience, beyond standard academic coursework.
 
-The project was completed independently and is intended to demonstrate applied financial modelling, valuation judgment, and risk analysis skills at a level relevant for graduate study in finance and investment analysis.
+The focus throughout was not on producing stylised outputs, but on building internally consistent models that reflect how valuation and risk assessment are approached in practice.
 
 ---
 
 ## 1. Aircraft Asset Valuation Model (Excel)
 
-### Objective
-To value a single commercial aircraft using a discounted cash flow (DCF) framework consistent with practices used by aircraft lessors, structured finance teams, and investment committees.
+### Purpose
+The objective of this model is to value a single commercial aircraft using a discounted cash flow framework similar to those applied by aircraft lessors and structured finance teams. The analysis adopts a long-term ownership perspective and explicitly links lease economics, depreciation behaviour, and exit assumptions.
 
-### Key Features
-- Aircraft-level DCF valuation with explicit lease cash flows and terminal residual value
-- Transparent and fully editable assumptions
-- Economic depreciation framework reflecting age, utilisation, and market dynamics
-- Base, downside, and stress residual value scenarios
-- Explicit WACC construction and sensitivity analysis
-- Lease Rate Factor (LRF) calibration consistent with market benchmarks
-- Clean valuation waterfall producing NPV and IRR outputs
+### Modelling Approach
+- Lease cash flows are forecast explicitly over the assumed lease term.
+- Aircraft value evolution is modelled using an economic depreciation approach, reflecting age, utilisation, and market maturity rather than accounting conventions.
+- Residual value is estimated under base, downside, and stress scenarios and discounted as a terminal cash flow.
+- The discount rate is constructed transparently using a weighted average cost of capital, with sensitivities used to test exposure to capital market assumptions.
+- Lease Rate Factors are calibrated to ensure consistency between pricing, return requirements, and residual risk.
+
+The model is structured to allow full transparency of assumptions and to make the interaction between lease pricing, residual value, and required return explicit.
 
 ### Files
-- `Aircraft_Valuation_Model.xlsx` – fully functional valuation model
-- `Aircraft_Valuation_Methodology.pdf` – modelling logic, assumptions, and interpretation of results
+- `Aircraft_Valuation_Model.xlsx`
+- `Aircraft_Valuation_Methodology.pdf`
 
 ---
 
-## 2. Airline Bankruptcy Risk Model (Python)
+## 2. Airline Default Risk Model (Python)
 
-### Objective
-To assess relative airline financial health and default risk using ratio analysis, scoring methodology, and macroeconomic stress testing.
+### Purpose
+This model assesses relative airline financial strength and potential distress risk through ratio analysis and scenario-based stress testing. The intent is not to predict bankruptcy mechanically, but to compare resilience across carriers under varying operating conditions.
 
 ### Methodology
-- Data ingestion and preprocessing using pandas
-- Liquidity, leverage, profitability, efficiency, and solvency ratios
-- Transparent scoring and ranking framework
-- Base, downside, and severe stress scenarios
-- Visualisation of results and comparative risk profiles
+- Financial statement data is ingested and processed using pandas.
+- Liquidity, leverage, coverage, efficiency, and cash sustainability metrics are computed consistently across airlines.
+- A scoring framework aggregates these indicators into a comparative risk ranking.
+- Base, downside, and severe stress scenarios are applied to reflect adverse movements in demand, cost structure, and margins.
+- Results are visualised to highlight cross-airline differences and sensitivity to stress assumptions.
+
+The notebook is fully reproducible and structured to make each transformation and assumption explicit.
 
 ### Files
-- `Airline_Default_Risk_Model.ipynb` – fully commented Jupyter notebook
-
-Airline financial data used in the analysis is sourced from publicly available financial statements.
-
----
-
-## Skills Demonstrated
-- Financial modelling and valuation (DCF, IRR, sensitivity analysis)
-- Credit and bankruptcy risk assessment
-- Applied use of Python for financial analysis
-- Scenario design and stress testing
-- Clear financial documentation and communication
+- `Airline_Default_Risk_Model.ipynb`
 
 ---
 
 ## Notes
-All assumptions are explicitly stated in the models. The work is original and intended for academic and demonstrative purposes.
+All assumptions are documented directly within the models. Data used for the airline analysis is drawn from publicly available financial disclosures. The work is intended for academic demonstration and skills development rather than investment recommendation.
